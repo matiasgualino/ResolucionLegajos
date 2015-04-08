@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_material_light"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/resumen_legajoGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_row="0"
+        android:layout_column="0"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/resumen_legajoTitle"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:text="Nro: 9999999/1 - Sergio Matias Gualino"/>
+
+            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/resumen_grid_legajo_metaData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:columnCount="6"
+                android:rowCount="1"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="Puntos resueltos: " >
+                </TextView>
+                <TextView
+                    android:layout_column="1"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="5"
+                    android:textStyle="bold"
+                    android:id="@+id/resumen_puntos_resueltos">
+                </TextView>
+
+                <TextView
+                    android:layout_column="2"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="Importe resuelto:" >
+                </TextView>
+                <TextView
+                    android:layout_column="3"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="2300.00"
+                    android:id="@+id/resumen_importe_resuelto">
+                </TextView>
+
+                <TextView
+                    android:layout_column="4"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="Unidades fijas resueltas:" >
+                </TextView>
+                <TextView
+                    android:layout_column="5"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="0"
+                    android:text="2300.00"
+                    android:id="@+id/resumen_uf_resueltas">
+                </TextView>
+
+
+            </GridLayout>
+
+            <View
+                android:id="@+id/resumen_legajoDivider"
+                android:layout_below="@id/resumen_legajoGrid"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:id="@+id/resumen_finish_button"
+                android:clickable="true"
+                android:onClick="confirmarLegajo"
+                android:focusable="false"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_gravity="right"
+                android:textAlignment="gravity"
+                android:text="CONFIRMAR"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/resumen_cardList"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

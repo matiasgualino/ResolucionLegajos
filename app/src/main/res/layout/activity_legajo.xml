@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_material_light"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/legajoGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_row="0"
+        android:layout_column="0"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/legajoTitle"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:text="Nro: 9999999/1 - Sergio Matias Gualino"/>
+
+            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/grid_legajo_metaData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:columnCount="4"
+                android:rowCount="6"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="2"
+                    android:text="Dominio: " >
+                </TextView>
+                <TextView
+                    android:layout_column="1"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="2"
+                    android:text="GGG455"
+                    android:id="@+id/legajo_dominio">
+                </TextView>
+
+                <TextView
+                    android:layout_column="2"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="2"
+                    android:text="Fecha: " >
+                </TextView>
+                <TextView
+                    android:layout_column="3"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="2"
+                    android:text="01/01/2015"
+                    android:id="@+id/legajo_fecha">
+                </TextView>
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="3"
+                    android:text="Cantidad de actas: " >
+                </TextView>
+                <TextView
+                    android:layout_column="1"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="3"
+                    android:text="3"
+                    android:id="@+id/cant_actas">
+                </TextView>
+
+                <TextView
+                    android:layout_column="2"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="3"
+                    android:text="Cantidad de infracciones:" >
+                </TextView>
+                <TextView
+                    android:layout_column="3"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="3"
+                    android:text="12"
+                    android:id="@+id/cant_infracciones">
+                </TextView>
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="4"
+                    android:text="Puntos resueltos: " >
+                </TextView>
+                <TextView
+                    android:layout_column="1"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="4"
+                    android:text="5"
+                    android:textStyle="bold"
+                    android:id="@+id/puntos_resueltos">
+                </TextView>
+
+                <TextView
+                    android:layout_column="2"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="4"
+                    android:text="Importe resuelto:" >
+                </TextView>
+                <TextView
+                    android:layout_column="3"
+                    android:layout_gravity="left"
+                    android:textColor="#fff"
+                    android:layout_row="4"
+                    android:text="2300.00"
+                    android:id="@+id/importe_resuelto">
+                </TextView>
+
+                <TextView
+                    android:layout_column="2"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_row="5"
+                    android:text="Infracciones resueltas:" >
+                </TextView>
+                <TextView
+                    android:layout_column="3"
+                    android:layout_gravity="left"
+                    android:textColor="#FF0000"
+                    android:layout_row="5"
+                    android:textSize="14sp"
+                    android:text="5"
+                    android:textStyle="bold"
+                    android:id="@+id/infracciones_resueltas">
+                </TextView>
+
+            </GridLayout>
+
+            <View
+                android:id="@+id/legajoDivider"
+                android:layout_below="@id/legajoGrid"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:visibility="visible"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:id="@+id/caratula_button"
+                    android:clickable="true"
+                    android:onClick="caratula"
+                    android:focusable="false"
+                    android:padding="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:layout_toLeftOf="@+id/finish_button"
+                    android:layout_alignTop="@+id/finish_button"
+                    android:text="CARATULA"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:id="@+id/finish_button"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:padding="16dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:layout_below="@id/divider"
+                    android:layout_alignParentRight="true"
+                    android:text="FINALIZAR"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cardList"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

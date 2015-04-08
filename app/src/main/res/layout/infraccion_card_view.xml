@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/step_pager_unsolve">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/infraccion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infraccion_titulo"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:drawableRight="@drawable/solve"
+            android:drawablePadding="16dp"
+            android:text="Exceso de velocidad"/>
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/grid_infraccion_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:columnCount="4"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_row="0"
+                android:text="Código: " >
+            </TextView>
+            <TextView
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:layout_gravity="left"
+                android:textColor="@color/black"
+                android:layout_row="0"
+                android:text="#6527"
+                android:id="@+id/codigo_infraccion">
+            </TextView>
+
+            <TextView
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_row="1"
+                android:text="Acta: " >
+            </TextView>
+            <TextView
+                android:layout_column="1"
+                android:layout_columnSpan="3"
+                android:layout_gravity="left"
+                android:textColor="@color/black"
+                android:layout_row="1"
+                android:text="#Q08643570 - T: Acta de Transito - Pago Voluntario"
+                android:id="@+id/acta_infraccion">
+            </TextView>
+
+            <TextView
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_row="2"
+                android:text="Importe mínimo: " >
+            </TextView>
+            <TextView
+                android:layout_column="1"
+                android:layout_gravity="left"
+                android:textColor="@color/black"
+                android:layout_row="2"
+                android:text="960.00"
+                android:id="@+id/infraccion_importe_minimo">
+            </TextView>
+
+            <TextView
+                android:layout_column="2"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_row="2"
+                android:text="Costo unidad fija: " >
+            </TextView>
+            <TextView
+                android:layout_column="3"
+                android:layout_gravity="left"
+                android:textColor="@color/black"
+                android:layout_row="2"
+                android:text="4.50"
+                android:id="@+id/infraccion_uf_costo">
+            </TextView>
+
+        </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/white"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:id="@+id/view_button"
+                android:clickable="true"
+                android:onClick="infraccionView"
+                android:focusable="false"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_toLeftOf="@+id/solve_button"
+                android:layout_alignTop="@+id/solve_button"
+                android:text="VISUALIZAR"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:id="@+id/solve_button"
+                android:clickable="true"
+                android:onClick="solveView"
+                android:focusable="false"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_below="@id/divider"
+                android:layout_alignParentRight="true"
+                android:text="RESOLVER"/>
+            </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

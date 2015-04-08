@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.resoluciones.legajos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppTheme" >
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".activities.LegajoActivity"
+            android:label="@string/title_activity_legajo"
+            android:parentActivityName=".activities.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activities.NoInternetActivity"
+            android:label="@string/title_activity_no_internet" >
+        </activity>
+        <activity
+            android:name=".activities.ActaActivity"
+            android:label="@string/title_activity_acta"
+            android:parentActivityName=".activities.LegajoActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LegajoActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FinishActivity"
+            android:label="@string/title_activity_finish"
+            android:parentActivityName=".activities.LegajoActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LegajoActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CaratulaActivity"
+            android:label="@string/title_activity_caratula"
+            android:parentActivityName=".activities.LegajoActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LegajoActivity" />
+        </activity>
+        <activity
+            android:name=".activities.LegajosListActivity"
+            android:label="@string/title_activity_legajos_list"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
